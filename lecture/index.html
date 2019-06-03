@@ -1,0 +1,26 @@
+<html>
+    <head>
+<!--        실제로 배포를 할 때에는 아래의 주소창에 development 말고 production 을 입력하면 된다.-->
+        <script crossorigin src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            const e = React.createElement;
+
+            class LikeButton extends React.Component {
+                constructor(props){
+                    super(props);
+                }
+
+                render(){
+                    return e('button', null ,'Like'); //<button>Like</button>
+                }
+            }
+        </script>
+        <script>
+            ReactDOM.render(e(LikeButton), document.querySelector('#root'));
+        </script>
+    </body>
+</html>
